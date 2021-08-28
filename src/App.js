@@ -1,4 +1,5 @@
 import './App.css';
+import TktMaster from './TktMaster';
 import WeatherParent from './weather/WeatherParent';
 import React, {useState, useEffect} from 'react';
 import LocationFinder from './NASAComponents/LocationFinder';
@@ -18,9 +19,10 @@ import {
   Jumbotron
 } from 'reactstrap';
 import NASA from './NASAComponents/NASA';
-import Kara from './NASAComponents/Kara/Kara'
 
 function App() {
+  const [position, setposition] = useState({ lat: 0, lon: 0 });
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [position, setposition] = useState({lat: 0, lon: 0});
@@ -58,20 +60,17 @@ function App() {
       
       <div className="Body">
         <img src={require('./images/here.jpg').default} height={400} width={500} className="Here"/>
-
-     
-      <h1>72 Hour Project</h1>
-
-      <LocationFinder position={position} />
       
       <div className="Weather" id="weather"></div>
+      <TktMaster position={position} />
+      <NASA position={position} />
       <WeatherParent position={position} />
       
       </div>
       <footer className="Footer">
         <p>© Project 72 Hours</p>
       </footer>
-      <NASA position={position} />
+      
     </div>
   );
 }
