@@ -25,7 +25,7 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const [position, setposition] = useState({lat: 0, lon: 0});
+
 
   useEffect(() => {
       navigator.geolocation.getCurrentPosition(success => {

@@ -13,7 +13,7 @@ const [games, setgames] = useState([]);
  var longitude = props.position.lon 
 
     const handleClick = async() => {
-        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=QInF0b7Aa2nMHrALmSHEEq4uwNwr5un8&latlong=${latitude},${longitude}&size=10`;
+        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=QInF0b7Aa2nMHrALmSHEEq4uwNwr5un8&latlong=${latitude},${longitude}&size=9`;
         const response = await fetch(url);
         const data = await response.json();
         console.log(data._embedded.events);
