@@ -16,7 +16,8 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-  Jumbotron
+  Jumbotron,
+  Container
 } from 'reactstrap';
 import NASA from './NASAComponents/NASA';
 
@@ -25,6 +26,7 @@ function App() {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+ 
 
   useEffect(() => {
       navigator.geolocation.getCurrentPosition(success => {
@@ -38,12 +40,12 @@ function App() {
   return (
     <div className="App">
       <Navbar color="primary" light expand="md" >
-        <NavbarBrand href="/"><h4 className="Linktext">Location</h4></NavbarBrand>
+        <NavbarBrand href="#nasa"><h4 className="Linktext">Location</h4></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/"><h4 className="Linktext">Events</h4></NavLink>
+              <NavLink href="#tktmaster"><h4 className="Linktext">Events</h4></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#weather"><h4 className="Linktext">Weather</h4></NavLink>
@@ -60,9 +62,21 @@ function App() {
       <div className="Body">
         <img src={require('./images/here.jpg').default} height={400} width={500} className="Here"/>
       
+
+        <div id="nasa">
+        <NASA position={position} />
+        </div>
+
+        <div id="tktmaster">
+          
+          <Container>
+        <TktMaster position={position} />
+        </Container>
+        </div>
+      
       <div className="Weather" id="weather"></div>
-      <TktMaster position={position} />
-      <NASA position={position} />
+      
+      
       <WeatherParent position={position} />
       
       </div>

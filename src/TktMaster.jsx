@@ -13,7 +13,7 @@ const [games, setgames] = useState([]);
  var longitude = props.position.lon 
 
     const handleClick = async() => {
-        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=QInF0b7Aa2nMHrALmSHEEq4uwNwr5un8&latlong=${latitude},${longitude}&size=10`;
+        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=QInF0b7Aa2nMHrALmSHEEq4uwNwr5un8&latlong=${latitude},${longitude}&size=9`;
         const response = await fetch(url);
         const data = await response.json();
         console.log(data._embedded.events);
@@ -29,19 +29,21 @@ const [games, setgames] = useState([]);
 
     return (
          <div>
+             <h1 id="tkt-info">Looking for something to do in your area? Click the button below to find your local events!</h1>
          <div>
-             <Container className="tktmaster">
-                <Row xs="4">
-                    <CardDeck>
-                        {displayEvents()}
-                    </CardDeck>
-                </Row>
-            </Container>
-        
+             {/* <Container> */}
+                 {/* <Row md="4"> */}
+
+             <CardDeck>
+            {displayEvents()}
+
+             </CardDeck>
+            {/* </Row> */}
+             {/* </Container> */}
 
          </div>
 
-         <button onClick={handleClick}>Click Me</button>
+         <button onClick={handleClick} id="get-events">Click Me</button>
     </div>
      );
 
