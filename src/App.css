@@ -36,11 +36,51 @@
   padding-top: 100px;
 }
 
+#nasa {
+  padding-top: 10px;
+}
+
+#tktmaster {
+  padding-top: 20%;
+  color:#007bff;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#tkt-info {
+  color: white;
+}
+
+
+
 #weather {
   padding-top: 20%;
 }
 
 .Weather-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+}
+
+#get-events {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+}
+
+#change-temp {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+}
+
+#tktmaster-button {
   background-color: #007bff;
   color: white;
   border-radius: 5px;

@@ -29,7 +29,7 @@ const WeatherChild = (props) => {
     return ( 
         <div>
         
-          <button onClick={convertTemp}>Change Temperature</button>
+          <button onClick={convertTemp} id="change-temp">Change Temperature</button>
           <CardBody id="temp">{newTemperature ? "Fahrenheit" : "Celsius"}
             <CardTitle  className="text-primary">Current Temp: {newTemperature ? getFahrenheit : temp }°</CardTitle>
             <CardSubtitle className="text-primary">Feels Like: {newTemperature ? getFahrenheit : feels_like}°</CardSubtitle>

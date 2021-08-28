@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
     Card, Button, CardImg, CardTitle, CardText, CardGroup, CardDeck,
-    CardSubtitle, CardBody,Container, Row, Col 
+    CardSubtitle, CardBody, Container, Row, Col 
   } from 'reactstrap';
 import TktMasterChild from './TktMasterChild';
 
@@ -29,20 +29,21 @@ const [games, setgames] = useState([]);
 
     return (
          <div>
+             <h1 id="tkt-info">Looking for something to do in your area? Click the button below to find your local events!</h1>
          <div>
-             <Container>
-                 <Row xs="4">
+             {/* <Container> */}
+                 {/* <Row md="4"> */}
 
              <CardDeck>
             {displayEvents()}
 
              </CardDeck>
-            </Row>
-             </Container>
+            {/* </Row> */}
+             {/* </Container> */}
 
          </div>
 
-         <button onClick={handleClick}>Click Me</button>
+         <button onClick={handleClick} id="get-events">Click Me</button>
     </div>
      );
 
