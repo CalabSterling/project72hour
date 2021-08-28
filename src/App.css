@@ -2,19 +2,26 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Linktext {
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1533745848184-3db07256e163?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80);
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  margin-top: 35px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
+#temp {
+  color: #007bff;
+}
+
+.Body {
+  background-color: #34a5f9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +29,32 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.Here {
+  padding-top: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#weather {
+  padding-top: 20%;
 }
+
+.Weather-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.tktmaster {
+  display: flex;
+  flex-direction: row;
+}
+
+.Footer {
+  background-color: #007bff;
+  color: white;
+  margin-top: 30px;
+}
+
