@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div>
-      <h1>72 Hour Project</h1>
-      <TktMaster />
+      <h1>Events</h1>
+      <TktMaster position={position} />
       <LocationFinder position={position} />
     </div >
   );
