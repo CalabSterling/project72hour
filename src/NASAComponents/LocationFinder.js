@@ -7,7 +7,7 @@ const LocationFinder = (props) => {
     return ( 
         <div>
             <NASA />
-            {props.position.lat}
+            
         </div>
      );
 }
