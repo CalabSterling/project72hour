@@ -17,6 +17,8 @@ import {
   NavbarText,
   Jumbotron
 } from 'reactstrap';
+import NASA from './NASAComponents/NASA';
+import Kara from './NASAComponents/Kara/Kara'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,8 +31,7 @@ function App() {
           var lon = success.coords.longitude;
           console.log(lon, lat)
           setposition({lat: lat, lon: lon})
-      }
-      )
+      })
   }, []);
 
   return (
@@ -60,6 +61,7 @@ function App() {
 
      
       <h1>72 Hour Project</h1>
+
       <LocationFinder position={position} />
       
       <div className="Weather" id="weather"></div>
@@ -69,6 +71,7 @@ function App() {
       <footer className="Footer">
         <p>© Project 72 Hours</p>
       </footer>
+      <NASA position={position} />
     </div>
   );
 }
